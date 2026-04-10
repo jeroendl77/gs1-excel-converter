@@ -35,26 +35,18 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'Georgia', serif; background: var(--bg); color: var(--text); font-size: 14px; line-height: 1.6; }
   .app { max-width: 980px; margin: 0 auto; padding: 2rem 1.5rem; }
-  
-  /* Header */
   .header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); }
   .header h1 { font-size: 20px; font-weight: normal; letter-spacing: -0.3px; }
   .header h1 span { color: var(--text-muted); }
-  
-  /* Cards */
   .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.5rem; margin-bottom: 1rem; }
   .card-title { display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; }
   .step-num { width: 26px; height: 26px; border-radius: 50%; background: var(--blue-light); color: var(--blue-text); display: flex; align-items: center; justify-content: center; font-size: 12px; font-family: monospace; flex-shrink: 0; }
   .step-num.done { background: var(--green-light); color: var(--green-text); }
   .card-title h2 { font-size: 15px; font-weight: normal; }
-  
-  /* Tabs */
   .tabs { display: flex; border-bottom: 1px solid var(--border); margin-bottom: 1.5rem; }
   .tab { padding: 8px 18px; font-size: 13px; cursor: pointer; border: none; background: transparent; color: var(--text-muted); border-bottom: 2px solid transparent; margin-bottom: -1px; font-family: 'Georgia', serif; }
   .tab:hover { color: var(--text); }
   .tab.active { color: var(--blue); border-bottom-color: var(--blue); }
-  
-  /* Buttons */
   .btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border: 1px solid var(--border-strong); border-radius: var(--radius); background: var(--surface); color: var(--text); cursor: pointer; font-size: 13px; font-family: 'Georgia', serif; transition: all 0.15s; }
   .btn:hover { background: var(--bg); }
   .btn:disabled { opacity: 0.4; cursor: not-allowed; pointer-events: none; }
@@ -66,30 +58,26 @@
   .btn-purple:hover { background: var(--purple-text); }
   .btn-danger { border-color: var(--red); color: var(--red); }
   .btn-sm { padding: 4px 10px; font-size: 12px; }
-  
-  /* Form elements */
   input, select { width: 100%; padding: 7px 10px; border: 1px solid var(--border-strong); border-radius: var(--radius); background: var(--surface); color: var(--text); font-size: 13px; font-family: 'Georgia', serif; }
   input:focus, select:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(26,95,180,0.1); }
   label { font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 4px; }
-  
-  /* Upload zone */
   .upload-zone { border: 2px dashed var(--border-strong); border-radius: var(--radius-lg); padding: 2rem; text-align: center; color: var(--text-muted); cursor: pointer; transition: all 0.15s; }
   .upload-zone:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-light); }
   .upload-zone.has-file { border-color: var(--green); background: var(--green-light); color: var(--green-text); }
-  
-  /* Badges */
   .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-family: monospace; }
   .badge-green { background: var(--green-light); color: var(--green-text); }
   .badge-amber { background: var(--amber-light); color: var(--amber-text); }
   .badge-blue { background: var(--blue-light); color: var(--blue-text); }
   .badge-red { background: var(--red-light); color: var(--red-text); }
-  
-  /* Status boxes */
   .box-warn { background: var(--amber-light); border: 1px solid #f0c060; border-radius: var(--radius); padding: 10px 14px; font-size: 13px; color: var(--amber-text); margin-bottom: 12px; }
   .box-ok { background: var(--green-light); border: 1px solid #a8d8b5; border-radius: var(--radius); padding: 10px 14px; font-size: 13px; color: var(--green-text); margin-bottom: 12px; }
   .box-info { background: var(--blue-light); border: 1px solid #a8c4e8; border-radius: var(--radius); padding: 10px 14px; font-size: 13px; color: var(--blue-text); margin-bottom: 12px; }
-  
-  /* Mapping table */
+  .box-err { background: var(--red-light); border: 1px solid #f0a8a8; border-radius: var(--radius); padding: 10px 14px; font-size: 13px; color: var(--red-text); margin-bottom: 12px; }
+  .divider { border: none; border-top: 1px solid var(--border); margin: 1rem 0; }
+  .flex-gap { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .struct-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; background: var(--bg); border-radius: var(--radius); padding: 14px; margin-bottom: 14px; }
+  .niveau-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
   .map-table { width: 100%; border-collapse: collapse; }
   .map-table th { font-size: 11px; color: var(--text-muted); text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--border); font-weight: normal; font-family: monospace; text-transform: uppercase; letter-spacing: 0.5px; }
   .map-table td { padding: 5px 8px; border-bottom: 1px solid var(--border); vertical-align: middle; }
@@ -100,94 +88,70 @@
   .cell-display { cursor: pointer; padding: 4px 8px; border-radius: 4px; display: inline-block; min-width: 140px; font-size: 13px; border: 1px solid transparent; transition: all 0.1s; }
   .cell-display:hover { border-color: var(--border-strong); background: var(--bg); }
   .cell-display.empty { color: var(--text-faint); font-style: italic; }
+  .cell-display.hidden { display: none; }
   .cell-input { display: none; }
   .cell-input.active { display: block; }
-  .cell-display.hidden { display: none; }
   .conf-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
-  
-  /* Structure settings */
-  .struct-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; background: var(--bg); border-radius: var(--radius); padding: 14px; margin-bottom: 14px; }
-  .niveau-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
-  
-  /* Hierarchy preview */
   .hier-block { border: 1px solid var(--border); border-radius: var(--radius); padding: 12px; margin-bottom: 8px; }
   .hier-title { font-size: 13px; font-weight: bold; margin-bottom: 6px; }
   .hier-level { display: flex; align-items: center; gap: 8px; padding: 3px 0; font-size: 13px; }
-  
-  /* Profile items */
   .profile-item { display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 8px; }
-  
-  /* Grid helpers */
-  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
-  .divider { border: none; border-top: 1px solid var(--border); margin: 1rem 0; }
-  .flex-gap { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
-  
-  /* Login */
   .login-wrap { max-width: 360px; margin: 6rem auto; }
   .login-logo { text-align: center; margin-bottom: 2rem; }
   .login-logo h1 { font-size: 22px; font-weight: normal; }
   .login-logo p { color: var(--text-muted); font-size: 13px; margin-top: 4px; }
-  
-  /* Modal */
   .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; z-index: 100; }
   .modal-box { background: var(--surface); border-radius: var(--radius-lg); padding: 1.5rem; width: 400px; border: 1px solid var(--border); }
-  
-  /* Spinner */
   @keyframes spin { to { transform: rotate(360deg); } }
   .spinner { width: 16px; height: 16px; border: 2px solid rgba(92,61,153,0.2); border-top-color: var(--purple); border-radius: 50%; animation: spin 0.7s linear infinite; }
 </style>
 </head>
 <body>
 <div id="app"></div>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script>
 const PASS = 'gs1team2024';
 const GS1_LEVELS = ['BASE_UNIT_OR_EACH','PACK_OR_INNER_PACK','CASE','PALLET'];
-const LVL_LABEL = { BASE_UNIT_OR_EACH:'Basiseenheid', PACK_OR_INNER_PACK:'Tussenverpakking', CASE:'Omdoos', PALLET:'Pallet' };
-const LVL_BADGE = { BASE_UNIT_OR_EACH:'badge-green', PACK_OR_INNER_PACK:'badge-blue', CASE:'badge-amber', PALLET:'badge-red' };
-
+const LVL_LABEL = {BASE_UNIT_OR_EACH:'Basiseenheid',PACK_OR_INNER_PACK:'Tussenverpakking',CASE:'Omdoos',PALLET:'Pallet'};
+const LVL_BADGE = {BASE_UNIT_OR_EACH:'badge-green',PACK_OR_INNER_PACK:'badge-blue',CASE:'badge-amber',PALLET:'badge-red'};
 const GS1F = [
-  {k:'GTIN',       l:'GTIN / EAN',          d:'Artikelcode / barcode',         req:true},
-  {k:'Niveau',     l:'Verpakkingsniveau',    d:'Basis / omdoos / pallet kolom', req:true},
-  {k:'Groepering', l:'Artikelnummer',        d:'Groeperingssleutel hiërarchie', req:true},
-  {k:'Naam',       l:'Productnaam',          d:'Korte omschrijving',            req:true},
-  {k:'Hoogte_mm',        l:'Hoogte (mm)',           d:'Hoogte verpakking'},
-  {k:'Breedte_mm',       l:'Breedte (mm)',           d:'Breedte verpakking'},
-  {k:'Diepte_mm',        l:'Diepte (mm)',            d:'Diepte verpakking'},
-  {k:'Brutogewicht_g',   l:'Brutogewicht (g)',       d:'Gewicht incl. verpakking'},
-  {k:'Nettogewicht_g',   l:'Nettogewicht (g)',       d:'Gewicht product zelf'},
-  {k:'Netto_inhoud',     l:'Netto-inhoud',           d:'Bijv. 33cl of 500g'},
-  {k:'Pallet_hoogte_mm', l:'Pallet hoogte (mm)',     d:'Hoogte volle pallet'},
-  {k:'Pallet_breedte_mm',l:'Pallet breedte (mm)',    d:'Breedte volle pallet'},
-  {k:'Pallet_diepte_mm', l:'Pallet diepte (mm)',     d:'Diepte volle pallet'},
-  {k:'Pallet_gewicht_kg',l:'Pallet gewicht (kg)',    d:'Gewicht volle pallet'},
-  {k:'Pallet_lagen',     l:'Lagen per pallet',       d:'Aantal lagen'},
-  {k:'Aantal_per_pallet',l:'Aantal per pallet',      d:'Totaal eenheden per pallet'},
-  {k:'Aantal_per_laag',  l:'Eenheden per laag',      d:'Per palletlaag'},
-  {k:'Pallet_type',      l:'Pallettype',             d:'Euro of Blok'},
-  {k:'Startdatum',       l:'Startdatum',             d:'Beschikbaarheidsdatum'},
+  {k:'GTIN',l:'GTIN / EAN',d:'Artikelcode / barcode',req:true},
+  {k:'Niveau',l:'Verpakkingsniveau',d:'Basis / omdoos / pallet kolom',req:true},
+  {k:'Groepering',l:'Artikelnummer',d:'Groeperingssleutel hiërarchie',req:true},
+  {k:'Naam',l:'Productnaam',d:'Korte omschrijving',req:true},
+  {k:'Hoogte_mm',l:'Hoogte (mm)',d:'Hoogte verpakking'},
+  {k:'Breedte_mm',l:'Breedte (mm)',d:'Breedte verpakking'},
+  {k:'Diepte_mm',l:'Diepte (mm)',d:'Diepte verpakking'},
+  {k:'Brutogewicht_g',l:'Brutogewicht (g)',d:'Gewicht incl. verpakking'},
+  {k:'Nettogewicht_g',l:'Nettogewicht (g)',d:'Gewicht product zelf'},
+  {k:'Netto_inhoud',l:'Netto-inhoud',d:'Bijv. 33cl of 500g'},
+  {k:'Pallet_hoogte_mm',l:'Pallet hoogte (mm)',d:'Hoogte volle pallet'},
+  {k:'Pallet_breedte_mm',l:'Pallet breedte (mm)',d:'Breedte volle pallet'},
+  {k:'Pallet_diepte_mm',l:'Pallet diepte (mm)',d:'Diepte volle pallet'},
+  {k:'Pallet_gewicht_kg',l:'Pallet gewicht (kg)',d:'Gewicht volle pallet'},
+  {k:'Pallet_lagen',l:'Lagen per pallet',d:'Aantal lagen'},
+  {k:'Aantal_per_pallet',l:'Aantal per pallet',d:'Totaal eenheden per pallet'},
+  {k:'Aantal_per_laag',l:'Eenheden per laag',d:'Per palletlaag'},
+  {k:'Pallet_type',l:'Pallettype',d:'Euro of Blok'},
+  {k:'Startdatum',l:'Startdatum',d:'Beschikbaarheidsdatum'},
 ];
 
 let S = {
-  page: 'login',
-  tab: 'convert',
-  profiles: JSON.parse(localStorage.getItem('gs1p') || '[]'),
-  settings: JSON.parse(localStorage.getItem('gs1s') || '{"gln":"","doelmarkt":"528","btw":"HIGH","startdatum":""}'),
-  fileLoaded: false, fileName: '', fileHeaders: [], fileRows: [],
-  aiState: 'idle',
-  mapping: {}, conf: {}, structuur: 'per_rij', groepCol: '', niveauCol: '', niveauMap: {},
-  hierarchies: [], warnings: [],
-  showAllFields: false,
-  modal: null, editMode: false, editIdx: null,
+  page:'login', tab:'convert',
+  profiles: JSON.parse(localStorage.getItem('gs1p')||'[]'),
+  settings: JSON.parse(localStorage.getItem('gs1s')||'{"gln":"","doelmarkt":"528","btw":"HIGH","startdatum":""}'),
+  fileLoaded:false, fileName:'', fileHeaders:[], fileRows:[],
+  aiState:'idle', aiError:'',
+  mapping:{}, conf:{}, structuur:'per_rij', groepCol:'', niveauCol:'', niveauMap:{},
+  hierarchies:[], warnings:[],
+  showAllFields:false,
+  modal:null, editMode:false, editIdx:null,
 };
 
 const saveP = () => localStorage.setItem('gs1p', JSON.stringify(S.profiles));
 const saveSet = () => localStorage.setItem('gs1s', JSON.stringify(S.settings));
 const $ = id => document.getElementById(id);
-const R = () => { $('app').innerHTML = S.page === 'login' ? tLogin() : tMain(); bind(); };
-
-/* ── TEMPLATES ── */
+const R = () => { $('app').innerHTML = S.page==='login' ? tLogin() : tMain(); bind(); };
 
 function tLogin() {
   return `<div class="login-wrap">
@@ -215,17 +179,17 @@ function tMain() {
       <button class="tab ${S.tab==='profiles'?'active':''}" data-tab="profiles">Klantprofielen</button>
       <button class="tab ${S.tab==='settings'?'active':''}" data-tab="settings">Instellingen</button>
     </div>
-    ${S.tab==='convert' ? tConvert() : S.tab==='profiles' ? tProfiles() : tSettings()}
-    ${S.modal ? tModal() : ''}
+    ${S.tab==='convert'?tConvert():S.tab==='profiles'?tProfiles():tSettings()}
+    ${S.modal?tModal():''}
   </div>`;
 }
 
 function tConvert() {
   return `<div>
     ${tStep1()}
-    ${S.fileLoaded ? tStep2() : ''}
-    ${S.aiState==='done' ? tStep3() : ''}
-    ${S.hierarchies.length ? tStep4() : ''}
+    ${S.fileLoaded?tStep2():''}
+    ${S.aiState==='done'?tStep3():''}
+    ${S.hierarchies.length?tStep4():''}
   </div>`;
 }
 
@@ -250,14 +214,17 @@ function tStep2() {
       <div class="step-num ${S.aiState==='done'?'done':''}">2</div>
       <h2>AI-analyse &amp; veldkoppeling</h2>
     </div>
-    ${S.aiState==='idle' ? `
+    ${S.aiState==='idle'?`
       <div class="box-info">De AI analyseert kolomnamen én de waarden erin om automatisch alle velden te koppelen. Daarna pas je aan wat nodig is.</div>
-      <button class="btn btn-purple" id="runai">&#10022; AI-detectie starten</button>` : ''}
-    ${S.aiState==='loading' ? `
+      <button class="btn btn-purple" id="runai">&#10022; AI-detectie starten</button>`:''}
+    ${S.aiState==='loading'?`
       <div class="flex-gap" style="font-size:13px;color:var(--text-muted)">
         <div class="spinner"></div> AI analyseert kolomnamen en structuur...
-      </div>` : ''}
-    ${S.aiState==='done' ? tMappingPanel() : ''}
+      </div>`:''}
+    ${S.aiState==='error'?`
+      <div class="box-err">&#10005; ${S.aiError}</div>
+      <button class="btn btn-purple" id="runai">&#10022; Opnieuw proberen</button>`:''}
+    ${S.aiState==='done'?tMappingPanel():''}
   </div>`;
 }
 
@@ -265,16 +232,14 @@ function tMappingPanel() {
   const matched = GS1F.filter(f => S.mapping[f.k]);
   const missingReq = GS1F.filter(f => f.req && !S.mapping[f.k]);
   const visible = GS1F.filter(f => f.req || S.mapping[f.k] || S.showAllFields);
-
   return `<div>
     <div class="flex-gap" style="margin-bottom:12px;justify-content:space-between">
       <div style="font-size:13px">
         <span style="color:var(--green);font-weight:bold">&#10003; ${matched.length} velden herkend</span>
-        ${missingReq.length ? `<span style="color:var(--amber);margin-left:12px">&#9888; ${missingReq.length} verplicht veld${missingReq.length>1?'en':''} ontbreken</span>` : ''}
+        ${missingReq.length?`<span style="color:var(--amber);margin-left:12px">&#9888; ${missingReq.length} verplicht veld${missingReq.length>1?'en':''} ontbreken</span>`:''}
       </div>
       <button class="btn btn-sm" id="togglefields">${S.showAllFields?'Minder velden':'Alle velden tonen'}</button>
     </div>
-
     <div class="struct-grid">
       <div>
         <label>Bestandsstructuur</label>
@@ -292,11 +257,10 @@ function tMappingPanel() {
         <input id="ai-niv" value="${S.niveauCol}" list="hdr-all" placeholder="Niveau kolom">
       </div>
     </div>
-
     <div style="background:var(--bg);border-radius:var(--radius);padding:14px;margin-bottom:14px">
       <div style="font-size:11px;color:var(--text-muted);font-family:monospace;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px">Niveauvertaling</div>
       ${GS1_LEVELS.map(lvl => {
-        const kv = Object.entries(S.niveauMap).find(([k,v]) => v===lvl);
+        const kv = Object.entries(S.niveauMap).find(([k,v])=>v===lvl);
         return `<div class="niveau-row">
           <input id="nv-${lvl}" value="${kv?kv[0]:''}" placeholder="Klantwaarde" style="width:130px" list="niv-vals">
           <span style="font-size:12px;color:var(--text-faint)">&#8594;</span>
@@ -305,7 +269,6 @@ function tMappingPanel() {
       }).join('')}
       <datalist id="niv-vals">${uniqueValsForCol(S.niveauCol).map(v=>`<option value="${v}">`).join('')}</datalist>
     </div>
-
     <table class="map-table">
       <thead><tr>
         <th style="width:200px">GS1-veld</th>
@@ -314,11 +277,10 @@ function tMappingPanel() {
         <th style="width:40px"></th>
       </tr></thead>
       <tbody id="map-tbody">
-        ${visible.map(f => tMappingRow(f)).join('')}
+        ${visible.map(f=>tMappingRow(f)).join('')}
       </tbody>
     </table>
     <datalist id="hdr-all">${S.fileHeaders.map(h=>`<option value="${h}">`).join('')}</datalist>
-
     <div class="flex-gap" style="margin-top:1rem">
       <button class="btn btn-primary" id="detectbtn">Hiërarchieën detecteren</button>
     </div>
@@ -326,10 +288,10 @@ function tMappingPanel() {
 }
 
 function tMappingRow(f) {
-  const val = S.mapping[f.k] || '';
-  const conf = S.conf[f.k] || 0;
-  const dotColor = val ? (conf>80?'var(--green)':conf>55?'var(--amber)':'var(--red)') : '#ccc';
-  const confLabel = val ? (conf>80?'Hoog':conf>55?'Matig':'Laag') : 'Niet herkend';
+  const val = S.mapping[f.k]||'';
+  const conf = S.conf[f.k]||0;
+  const dotColor = val?(conf>80?'var(--green)':conf>55?'var(--amber)':'var(--red)'):'#ccc';
+  const confLabel = val?(conf>80?'Hoog':conf>55?'Matig':'Laag'):'Niet herkend';
   return `<tr>
     <td>
       <div class="field-name">${f.l}${f.req?' <span style="color:var(--red);font-size:10px">*</span>':''}</div>
@@ -356,11 +318,11 @@ function tStep3() {
       <div class="step-num ${S.hierarchies.length?'done':''}">3</div>
       <h2>Gedetecteerde hiërarchieën</h2>
     </div>
-    ${S.warnings.length ? `<div class="box-warn"><strong>&#9888; ${S.warnings.length} waarschuwing${S.warnings.length>1?'en':''}</strong>${S.warnings.map(w=>`<div style="margin-top:3px">&bull; ${w}</div>`).join('')}</div>` : ''}
-    ${!S.warnings.length && S.hierarchies.length ? `<div class="box-ok">&#10003; ${S.hierarchies.length} hiërarchie${S.hierarchies.length>1?'ën':''} correct herkend — klaar voor export</div>` : ''}
-    ${S.hierarchies.map((h,i) => `<div class="hier-block">
-      <div class="hier-title">${h.naam || 'Artikel '+(i+1)}</div>
-      ${h.niveaus.map((n,ni) => `<div class="hier-level" style="padding-left:${ni*16}px">
+    ${S.warnings.length?`<div class="box-warn"><strong>&#9888; ${S.warnings.length} waarschuwing${S.warnings.length>1?'en':''}</strong>${S.warnings.map(w=>`<div style="margin-top:3px">&bull; ${w}</div>`).join('')}</div>`:''}
+    ${!S.warnings.length&&S.hierarchies.length?`<div class="box-ok">&#10003; ${S.hierarchies.length} hiërarchie${S.hierarchies.length>1?'ën':''} correct herkend</div>`:''}
+    ${S.hierarchies.map((h,i)=>`<div class="hier-block">
+      <div class="hier-title">${h.naam||'Artikel '+(i+1)}</div>
+      ${h.niveaus.map((n,ni)=>`<div class="hier-level" style="padding-left:${ni*16}px">
         <span style="color:var(--text-faint);font-size:10px">${ni>0?'└─':''}</span>
         <span class="badge ${LVL_BADGE[n.niveau]||'badge-blue'}">${LVL_LABEL[n.niveau]||n.niveau}</span>
         <span style="font-family:monospace;font-size:12px;color:${n.gtin?'var(--text)':'var(--red)'}">${n.gtin||'GTIN ontbreekt'}</span>
@@ -385,11 +347,11 @@ function tStep4() {
 }
 
 function tModal() {
-  if (S.modal === 'saveprof') return `<div class="modal-overlay" id="modal-overlay">
+  if (S.modal==='saveprof') return `<div class="modal-overlay" id="modal-overlay">
     <div class="modal-box">
       <div style="font-size:15px;margin-bottom:1rem">Opslaan als klantprofiel</div>
       <label>Profielnaam (klantnaam)</label>
-      <input type="text" id="save-name" placeholder="bijv. Lefebvre" style="margin-bottom:1rem" autofocus>
+      <input type="text" id="save-name" placeholder="bijv. Lefebvre" style="margin-bottom:1rem">
       <div class="flex-gap">
         <button class="btn btn-success" id="confirmsave">Opslaan</button>
         <button class="btn" id="closemodal">Annuleren</button>
@@ -405,8 +367,8 @@ function tProfiles() {
       <div style="font-weight:bold;font-size:15px">Klantprofielen</div>
       <button class="btn btn-sm btn-purple" id="newprofbtn">+ Nieuw profiel</button>
     </div>
-    ${!S.profiles.length ? `<div class="card" style="color:var(--text-muted);font-size:13px">Nog geen profielen. Upload een bestand via Converteren en sla het op als klantprofiel.</div>` : ''}
-    ${S.profiles.map((p,i) => `<div class="profile-item">
+    ${!S.profiles.length?`<div class="card" style="color:var(--text-muted);font-size:13px">Nog geen profielen. Upload een bestand via Converteren en sla het op.</div>`:''}
+    ${S.profiles.map((p,i)=>`<div class="profile-item">
       <div>
         <div style="font-weight:bold;font-size:14px">${p.name}</div>
         <div style="font-size:12px;color:var(--text-muted);margin-top:2px">
@@ -419,7 +381,7 @@ function tProfiles() {
         <button class="btn btn-sm btn-danger" data-del="${i}">Verwijderen</button>
       </div>
     </div>`).join('')}
-    ${S.editMode ? tEditForm() : ''}
+    ${S.editMode?tEditForm():''}
   </div>`;
 }
 
@@ -439,8 +401,8 @@ function tEditForm() {
     <div style="margin-bottom:12px">
       <label>Niveauvertaling</label>
       <div style="margin-top:6px">
-        ${GS1_LEVELS.map(lvl => {
-          const kv = Object.entries(p.niveauMapping||{}).find(([k,v])=>v===lvl);
+        ${GS1_LEVELS.map(lvl=>{
+          const kv=Object.entries(p.niveauMapping||{}).find(([k,v])=>v===lvl);
           return `<div class="niveau-row">
             <input id="envm-${lvl}" value="${kv?kv[0]:''}" placeholder="Klantwaarde" style="width:130px">
             <span style="font-size:12px;color:var(--text-faint)">&#8594;</span>
@@ -453,7 +415,7 @@ function tEditForm() {
     <div style="font-weight:bold;font-size:13px;margin-bottom:10px">Veldkoppelingen</div>
     <table class="map-table">
       <thead><tr><th>GS1-veld</th><th>Kolomnaam klant</th></tr></thead>
-      <tbody>${GS1F.map(f => `<tr>
+      <tbody>${GS1F.map(f=>`<tr>
         <td><div class="field-name">${f.l}</div><div class="field-desc">${f.d}</div></td>
         <td><input id="em-${f.k}" value="${p.mapping?.[f.k]||''}" placeholder="Kolomnaam klant"></td>
       </tr>`).join('')}</tbody>
@@ -485,17 +447,15 @@ function tSettings() {
   </div>`;
 }
 
-/* ── HELPERS ── */
-
 function uniqueValsForCol(col) {
   const i = S.fileHeaders.indexOf(col);
-  if (i < 0) return [];
-  return [...new Set(S.fileRows.map(r => String(r[i]||'')).filter(Boolean))].slice(0,10);
+  if (i<0) return [];
+  return [...new Set(S.fileRows.map(r=>String(r[i]||'')).filter(Boolean))].slice(0,10);
 }
 
 function getCol(row, col) {
-  const i = S.fileHeaders.findIndex(h => String(h).trim() === String(col).trim());
-  return i >= 0 ? String(row[i]||'').trim() : '';
+  const i = S.fileHeaders.findIndex(h=>String(h).trim()===String(col).trim());
+  return i>=0 ? String(row[i]||'').trim() : '';
 }
 
 function collectSettings() {
@@ -503,51 +463,42 @@ function collectSettings() {
   S.groepCol  = $('ai-groep')?.value?.trim() || S.groepCol;
   S.niveauCol = $('ai-niv')?.value?.trim() || S.niveauCol;
   S.niveauMap = {};
-  GS1_LEVELS.forEach(lvl => { const v = $('nv-'+lvl)?.value?.trim(); if(v) S.niveauMap[v]=lvl; });
-  GS1F.forEach(f => { const el = $('inp-'+f.k); if(el) S.mapping[f.k] = el.value.trim(); });
+  GS1_LEVELS.forEach(lvl => { const v=$('nv-'+lvl)?.value?.trim(); if(v) S.niveauMap[v]=lvl; });
+  GS1F.forEach(f => { const el=$('inp-'+f.k); if(el) S.mapping[f.k]=el.value.trim(); });
 }
 
-/* ── INLINE EDIT ── */
-
 window.startEdit = k => {
-  const d = $('disp-'+k), inp = $('inp-'+k);
-  if (d && inp) { d.classList.add('hidden'); inp.classList.add('active'); inp.focus(); inp.select(); }
+  const d=$('disp-'+k), inp=$('inp-'+k);
+  if(d&&inp){d.classList.add('hidden');inp.classList.add('active');inp.focus();inp.select();}
 };
 window.commitEdit = k => {
-  const inp = $('inp-'+k), d = $('disp-'+k);
-  if (!inp || !d) return;
-  S.mapping[k] = inp.value.trim();
+  const inp=$('inp-'+k), d=$('disp-'+k);
+  if(!inp||!d) return;
+  S.mapping[k]=inp.value.trim();
   inp.classList.remove('active');
   d.classList.remove('hidden');
-  d.textContent = S.mapping[k] || 'Klik om in te vullen';
-  d.className = 'cell-display' + (S.mapping[k]?'':' empty');
-  S.conf[k] = S.mapping[k] ? (S.conf[k]||50) : 0;
-  const tbody = $('map-tbody');
-  if (tbody) {
-    const f = GS1F.find(f=>f.k===k);
-    if (f) {
-      const row = inp.closest('tr');
-      if (row) row.outerHTML = tMappingRow(f);
-    }
-  }
+  d.textContent=S.mapping[k]||'Klik om in te vullen';
+  d.className='cell-display'+(S.mapping[k]?'':' empty');
+  S.conf[k]=S.mapping[k]?(S.conf[k]||50):0;
+  const f=GS1F.find(f=>f.k===k);
+  const row=inp.closest('tr');
+  if(f&&row) row.outerHTML=tMappingRow(f);
 };
 window.cancelEdit = k => {
-  const inp = $('inp-'+k), d = $('disp-'+k);
-  if (inp && d) { inp.classList.remove('active'); d.classList.remove('hidden'); }
+  const inp=$('inp-'+k), d=$('disp-'+k);
+  if(inp&&d){inp.classList.remove('active');d.classList.remove('hidden');}
 };
 window.clearField = k => { S.mapping[k]=''; S.conf[k]=0; R(); };
 
-/* ── AI DETECTION ── */
-
 async function runAI() {
-  S.aiState = 'loading'; R();
+  S.aiState='loading'; S.aiError=''; R();
   const headers = S.fileHeaders;
   const uvs = {};
   headers.forEach((h,i) => {
-    const vals = [...new Set(S.fileRows.slice(0,15).map(r=>String(r[i]||'')).filter(Boolean))];
-    if (vals.length) uvs[h] = vals.slice(0,6);
+    const vals=[...new Set(S.fileRows.slice(0,15).map(r=>String(r[i]||'')).filter(Boolean))];
+    if(vals.length) uvs[h]=vals.slice(0,6);
   });
-  const preview = S.fileRows.slice(0,3).map(r => headers.map((h,i)=>h+':'+String(r[i]||'')).join(' | ')).join('\n');
+  const preview = S.fileRows.slice(0,3).map(r=>headers.map((h,i)=>h+':'+String(r[i]||'')).join(' | ')).join('\n');
   const prompt = `Je bent een GS1 datakwaliteitsexpert. Analyseer dit klantenbestand en geef de kolomkoppelingen terug.
 
 Kolomnamen: ${headers.map((h,i)=>`${i+1}."${h}"`).join(', ')}
@@ -568,170 +519,160 @@ Geef ALLEEN geldige JSON terug, geen markdown, geen uitleg:
 Neem alleen velden op met confidence > 40. Gebruik exacte kolomnamen.`;
 
   try {
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
+    const res = await fetch('/api/detect', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'x-api-key': window.ANTHROPIC_API_KEY || '', 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ model:'claude-sonnet-4-20250514', max_tokens:1500, messages:[{role:'user',content:prompt}] })
     });
+    if (!res.ok) {
+      const err = await res.json();
+      throw new Error(err.error || 'Server fout: '+res.status);
+    }
     const data = await res.json();
-    const txt = data.content?.find(b=>b.type==='text')?.text || '{}';
+    const txt = data.content?.find(b=>b.type==='text')?.text||'{}';
     const result = JSON.parse(txt.replace(/```json|```/g,'').trim());
-    S.structuur = result.structuur || 'per_rij';
-    S.groepCol  = result.groeperingskolom || '';
-    S.niveauCol = result.niveaukolom || '';
-    S.niveauMap = result.niveauMapping || {};
-    S.mapping = {}; S.conf = {};
-    (result.mapping || []).forEach(sg => { S.mapping[sg.field]=sg.customerCol; S.conf[sg.field]=sg.confidence; });
+    S.structuur = result.structuur||'per_rij';
+    S.groepCol  = result.groeperingskolom||'';
+    S.niveauCol = result.niveaukolom||'';
+    S.niveauMap = result.niveauMapping||{};
+    S.mapping={}; S.conf={};
+    (result.mapping||[]).forEach(sg=>{ S.mapping[sg.field]=sg.customerCol; S.conf[sg.field]=sg.confidence; });
+    S.aiState='done';
   } catch(e) {
-    console.error('AI error:', e);
-    S.mapping = {}; S.conf = {};
+    S.aiState='error';
+    S.aiError='AI-detectie mislukt: '+e.message+'. Controleer of de API key correct is ingesteld in Vercel.';
   }
-  S.aiState = 'done'; R();
+  R();
 }
-
-/* ── DETECT HIERARCHIES ── */
 
 function detectHierarchies() {
   collectSettings();
-  const warns = [], hierarchies = [], groepen = {};
+  const warns=[], hierarchies=[], groepen={};
   S.fileRows.forEach(row => {
-    const raw = getCol(row, S.niveauCol);
-    const lvl = S.niveauMap[raw];
-    if (!lvl || !GS1_LEVELS.includes(lvl)) return;
-    const gk = S.groepCol ? getCol(row, S.groepCol) : 'default';
-    if (!gk) return;
-    if (!groepen[gk]) groepen[gk] = [];
-    groepen[gk].push({row, niveau:lvl});
+    const raw=getCol(row,S.niveauCol);
+    const lvl=S.niveauMap[raw];
+    if(!lvl||!GS1_LEVELS.includes(lvl)) return;
+    const gk=S.groepCol?getCol(row,S.groepCol):'default';
+    if(!gk) return;
+    if(!groepen[gk]) groepen[gk]=[];
+    groepen[gk].push({row,niveau:lvl});
   });
-  Object.entries(groepen).forEach(([key, items]) => {
-    const sorted = GS1_LEVELS.slice().reverse().map(lvl => items.find(i=>i.niveau===lvl)).filter(Boolean);
-    if (!sorted.length) return;
-    const naamRij = items.find(i=>i.niveau==='BASE_UNIT_OR_EACH') || items[0];
-    const naam = S.mapping.Naam ? getCol(naamRij.row, S.mapping.Naam) : 'Artikel '+key;
-    const niveaus = sorted.map((item, ni) => {
-      const gtin = getCol(item.row, S.mapping.GTIN || '');
-      if (!gtin) warns.push(`${naam||key} (${LVL_LABEL[item.niveau]}): GTIN ontbreekt`);
-      const aantalC = S.mapping.Aantal_per_pallet || '';
-      return { niveau:item.niveau, gtin, aantal:aantalC&&ni>0?getCol(item.row,aantalC):'', row:item.row };
+  Object.entries(groepen).forEach(([key,items]) => {
+    const sorted=GS1_LEVELS.slice().reverse().map(lvl=>items.find(i=>i.niveau===lvl)).filter(Boolean);
+    if(!sorted.length) return;
+    const naamRij=items.find(i=>i.niveau==='BASE_UNIT_OR_EACH')||items[0];
+    const naam=S.mapping.Naam?getCol(naamRij.row,S.mapping.Naam):'Artikel '+key;
+    const niveaus=sorted.map((item,ni) => {
+      const gtin=getCol(item.row,S.mapping.GTIN||'');
+      if(!gtin) warns.push(`${naam||key} (${LVL_LABEL[item.niveau]}): GTIN ontbreekt`);
+      const aantalC=S.mapping.Aantal_per_pallet||'';
+      return{niveau:item.niveau,gtin,aantal:aantalC&&ni>0?getCol(item.row,aantalC):'',row:item.row};
     });
-    hierarchies.push({naam:naam||key, niveaus});
+    hierarchies.push({naam:naam||key,niveaus});
   });
-  S.hierarchies = hierarchies; S.warnings = warns; R();
+  S.hierarchies=hierarchies; S.warnings=warns; R();
 }
-
-/* ── EXPORT ── */
 
 function exportGS1() {
-  const s = S.settings, m = S.mapping;
-  const wb = XLSX.utils.book_new();
-  const sheets = {
-    AccessControl:               {h:['Gtin','TargetMarketCountryCode','TradeItemUnitDescriptorCode','DescriptionShort','PublishToTargetMarket','AccessControlGroupName'],r:[]},
-    CatalogueItem:               {h:['Gtin','TargetMarketCountryCode','InformationProviderOfTradeItem','TradeItemUnitDescriptorCode','IsTradeItemABaseUnit','IsTradeItemAConsumerUnit','IsTradeItemADespatchUnit','IsTradeItemAnOrderableUnit','QuantityOfChildren','TotalQuantityOfNextLowerLevelTradeItem','QuantityOfNextLowerLevelTradeItem','ChildGtin'],r:[]},
-    TradeItemMeasurements:       {h:['Gtin','TargetMarketCountryCode','InformationProviderOfTradeItem','TradeItemUnitDescriptorCode','Depth_Unit','Depth_Value','Height_Unit','Height_Value','Width_Unit','Width_Value','GrossWeight_Unit','GrossWeight_Value','NetWeight_Unit','NetWeight_Value','NetContent_Unit','NetContent_Value'],r:[]},
-    TradeItemDescription:        {h:['Gtin','TargetMarketCountryCode','InformationProviderOfTradeItem','TradeItemUnitDescriptorCode','DescriptionShort_Lang','DescriptionShort_Value'],r:[]},
+  const s=S.settings, m=S.mapping;
+  const wb=XLSX.utils.book_new();
+  const sheets={
+    AccessControl:{h:['Gtin','TargetMarketCountryCode','TradeItemUnitDescriptorCode','DescriptionShort','PublishToTargetMarket','AccessControlGroupName'],r:[]},
+    CatalogueItem:{h:['Gtin','TargetMarketCountryCode','InformationProviderOfTradeItem','TradeItemUnitDescriptorCode','IsTradeItemABaseUnit','IsTradeItemAConsumerUnit','IsTradeItemADespatchUnit','IsTradeItemAnOrderableUnit','QuantityOfChildren','TotalQuantityOfNextLowerLevelTradeItem','QuantityOfNextLowerLevelTradeItem','ChildGtin'],r:[]},
+    TradeItemMeasurements:{h:['Gtin','TargetMarketCountryCode','InformationProviderOfTradeItem','TradeItemUnitDescriptorCode','Depth_Unit','Depth_Value','Height_Unit','Height_Value','Width_Unit','Width_Value','GrossWeight_Unit','GrossWeight_Value','NetWeight_Unit','NetWeight_Value','NetContent_Unit','NetContent_Value'],r:[]},
+    TradeItemDescription:{h:['Gtin','TargetMarketCountryCode','InformationProviderOfTradeItem','TradeItemUnitDescriptorCode','DescriptionShort_Lang','DescriptionShort_Value'],r:[]},
     DeliveryPurchasingInformation:{h:['Gtin','TargetMarketCountryCode','InformationProviderOfTradeItem','TradeItemUnitDescriptorCode','StartAvailabilityDateTime'],r:[]},
-    DutyFeeTaxInformation:       {h:['Gtin','TargetMarketCountryCode','InformationProviderOfTradeItem','TradeItemUnitDescriptorCode','DutyFeeTaxTypeCode','DutyFeeTaxCategoryCode'],r:[]},
-    TradeItemHierarchy:          {h:['Gtin','TargetMarketCountryCode','InformationProviderOfTradeItem','TradeItemUnitDescriptorCode','LayersPerPallet','UnitsPerLayer'],r:[]},
+    DutyFeeTaxInformation:{h:['Gtin','TargetMarketCountryCode','InformationProviderOfTradeItem','TradeItemUnitDescriptorCode','DutyFeeTaxTypeCode','DutyFeeTaxCategoryCode'],r:[]},
+    TradeItemHierarchy:{h:['Gtin','TargetMarketCountryCode','InformationProviderOfTradeItem','TradeItemUnitDescriptorCode','LayersPerPallet','UnitsPerLayer'],r:[]},
   };
   S.hierarchies.forEach(h => {
-    h.niveaus.forEach((n, ni) => {
-      const g = k => m[k] ? getCol(n.row, m[k]) : '';
-      const isBase = n.niveau==='BASE_UNIT_OR_EACH', isPallet = n.niveau==='PALLET';
-      const child = ni < h.niveaus.length-1 ? h.niveaus[ni+1] : null;
-      sheets.AccessControl.r.push([n.gtin, s.doelmarkt, n.niveau, g('Naam'), true, 'Alle kanalen']);
-      sheets.CatalogueItem.r.push([n.gtin, s.doelmarkt, s.gln, n.niveau, isBase, isBase, !isBase, !isBase, child?1:'', g('Aantal_per_pallet'), g('Aantal_per_laag'), child?.gtin||'']);
-      sheets.TradeItemMeasurements.r.push([n.gtin, s.doelmarkt, s.gln, n.niveau, 'MMT', g(isPallet?'Pallet_diepte_mm':'Diepte_mm'), 'MMT', g(isPallet?'Pallet_hoogte_mm':'Hoogte_mm'), 'MMT', g(isPallet?'Pallet_breedte_mm':'Breedte_mm'), 'KGM', g(isPallet?'Pallet_gewicht_kg':'Brutogewicht_g'), 'GRM', g('Nettogewicht_g'), 'H87', g('Netto_inhoud')]);
-      sheets.TradeItemDescription.r.push([n.gtin, s.doelmarkt, s.gln, n.niveau, 'nl', g('Naam')]);
-      sheets.DeliveryPurchasingInformation.r.push([n.gtin, s.doelmarkt, s.gln, n.niveau, g('Startdatum')||s.startdatum]);
-      sheets.DutyFeeTaxInformation.r.push([n.gtin, s.doelmarkt, s.gln, n.niveau, 'BTW', s.btw]);
-      sheets.TradeItemHierarchy.r.push([n.gtin, s.doelmarkt, s.gln, n.niveau, isPallet?g('Pallet_lagen'):'', isPallet?g('Aantal_per_laag'):'']);
+    h.niveaus.forEach((n,ni) => {
+      const g=k=>m[k]?getCol(n.row,m[k]):'';
+      const isBase=n.niveau==='BASE_UNIT_OR_EACH', isPallet=n.niveau==='PALLET';
+      const child=ni<h.niveaus.length-1?h.niveaus[ni+1]:null;
+      sheets.AccessControl.r.push([n.gtin,s.doelmarkt,n.niveau,g('Naam'),true,'Alle kanalen']);
+      sheets.CatalogueItem.r.push([n.gtin,s.doelmarkt,s.gln,n.niveau,isBase,isBase,!isBase,!isBase,child?1:'',g('Aantal_per_pallet'),g('Aantal_per_laag'),child?.gtin||'']);
+      sheets.TradeItemMeasurements.r.push([n.gtin,s.doelmarkt,s.gln,n.niveau,'MMT',g(isPallet?'Pallet_diepte_mm':'Diepte_mm'),'MMT',g(isPallet?'Pallet_hoogte_mm':'Hoogte_mm'),'MMT',g(isPallet?'Pallet_breedte_mm':'Breedte_mm'),'KGM',g(isPallet?'Pallet_gewicht_kg':'Brutogewicht_g'),'GRM',g('Nettogewicht_g'),'H87',g('Netto_inhoud')]);
+      sheets.TradeItemDescription.r.push([n.gtin,s.doelmarkt,s.gln,n.niveau,'nl',g('Naam')]);
+      sheets.DeliveryPurchasingInformation.r.push([n.gtin,s.doelmarkt,s.gln,n.niveau,g('Startdatum')||s.startdatum]);
+      sheets.DutyFeeTaxInformation.r.push([n.gtin,s.doelmarkt,s.gln,n.niveau,'BTW',s.btw]);
+      sheets.TradeItemHierarchy.r.push([n.gtin,s.doelmarkt,s.gln,n.niveau,isPallet?g('Pallet_lagen'):'',isPallet?g('Aantal_per_laag'):'']);
     });
   });
-  Object.entries(sheets).forEach(([name,{h,r}]) => XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet([h,...r]), name));
-  XLSX.writeFile(wb, `GS1_import_${new Date().toISOString().slice(0,10)}.xlsx`);
+  Object.entries(sheets).forEach(([name,{h,r}])=>XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet([h,...r]),name));
+  XLSX.writeFile(wb,`GS1_import_${new Date().toISOString().slice(0,10)}.xlsx`);
 }
 
-/* ── SAVE PROFILE ── */
-
 function saveProfile(name) {
-  const prof = { name, structuur:S.structuur, groeperingskolom:S.groepCol, niveaukolom:S.niveauCol, niveauMapping:{...S.niveauMap}, mapping:{...S.mapping} };
-  const ei = S.profiles.findIndex(p=>p.name===name);
-  if (ei>=0) S.profiles[ei]=prof; else S.profiles.push(prof);
+  const prof={name,structuur:S.structuur,groeperingskolom:S.groepCol,niveaukolom:S.niveauCol,niveauMapping:{...S.niveauMap},mapping:{...S.mapping}};
+  const ei=S.profiles.findIndex(p=>p.name===name);
+  if(ei>=0) S.profiles[ei]=prof; else S.profiles.push(prof);
   saveP();
 }
 
-/* ── EVENT BINDING ── */
-
 function bind() {
-  $('loginbtn')?.addEventListener('click', () => {
-    if ($('pw').value === PASS) { S.page='main'; R(); }
+  $('loginbtn')?.addEventListener('click',()=>{
+    if($('pw').value===PASS){S.page='main';R();}
     else $('pwerr').style.display='block';
   });
-  $('pw')?.addEventListener('keydown', e => { if(e.key==='Enter') $('loginbtn').click(); });
-  $('logoutbtn')?.addEventListener('click', () => { S.page='login'; R(); });
-  document.querySelectorAll('[data-tab]').forEach(b => b.addEventListener('click', e => { S.tab=e.target.dataset.tab; R(); }));
-
-  $('upzone')?.addEventListener('click', () => $('upfile').click());
-  $('upfile')?.addEventListener('change', e => {
-    const f = e.target.files[0]; if(!f) return;
-    const reader = new FileReader();
-    reader.onload = ev => {
-      const wb = XLSX.read(ev.target.result, {type:'array'});
-      const ws = wb.Sheets[wb.SheetNames[0]];
-      const data = XLSX.utils.sheet_to_json(ws, {header:1, defval:''});
-      if (data.length < 2) return;
-      S.fileHeaders = data[0].map(String);
-      S.fileRows = data.slice(1).filter(r => r.some(v => v!==''&&v!==null));
-      S.fileName = f.name; S.fileLoaded = true;
+  $('pw')?.addEventListener('keydown',e=>{if(e.key==='Enter')$('loginbtn').click()});
+  $('logoutbtn')?.addEventListener('click',()=>{S.page='login';R()});
+  document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',e=>{S.tab=e.target.dataset.tab;R()}));
+  $('upzone')?.addEventListener('click',()=>$('upfile').click());
+  $('upfile')?.addEventListener('change',e=>{
+    const f=e.target.files[0]; if(!f) return;
+    const reader=new FileReader();
+    reader.onload=ev=>{
+      const wb=XLSX.read(ev.target.result,{type:'array'});
+      const ws=wb.Sheets[wb.SheetNames[0]];
+      const data=XLSX.utils.sheet_to_json(ws,{header:1,defval:''});
+      if(data.length<2) return;
+      S.fileHeaders=data[0].map(String);
+      S.fileRows=data.slice(1).filter(r=>r.some(v=>v!==''&&v!==null));
+      S.fileName=f.name; S.fileLoaded=true;
       S.aiState='idle'; S.mapping={}; S.conf={}; S.hierarchies=[]; S.warnings=[];
       R();
     };
     reader.readAsArrayBuffer(f);
   });
-
-  $('runai')?.addEventListener('click', runAI);
-
-  $('togglefields')?.addEventListener('click', () => {
+  $('runai')?.addEventListener('click',runAI);
+  $('togglefields')?.addEventListener('click',()=>{
     collectSettings();
-    S.showAllFields = !S.showAllFields;
-    const tbody = $('map-tbody');
-    if (tbody) {
-      const visible = GS1F.filter(f => f.req || S.mapping[f.k] || S.showAllFields);
-      tbody.innerHTML = visible.map(f => tMappingRow(f)).join('');
-      $('togglefields').textContent = S.showAllFields ? 'Minder velden' : 'Alle velden tonen';
+    S.showAllFields=!S.showAllFields;
+    const tbody=$('map-tbody');
+    if(tbody){
+      const visible=GS1F.filter(f=>f.req||S.mapping[f.k]||S.showAllFields);
+      tbody.innerHTML=visible.map(f=>tMappingRow(f)).join('');
+      $('togglefields').textContent=S.showAllFields?'Minder velden':'Alle velden tonen';
     }
   });
-
-  $('detectbtn')?.addEventListener('click', detectHierarchies);
-  $('exportbtn')?.addEventListener('click', exportGS1);
-
-  $('saveprofbtn')?.addEventListener('click', () => { collectSettings(); S.modal='saveprof'; R(); });
-  $('closemodal')?.addEventListener('click', () => { S.modal=null; R(); });
-  $('modal-overlay')?.addEventListener('click', e => { if(e.target.id==='modal-overlay'){S.modal=null;R();} });
-  $('confirmsave')?.addEventListener('click', () => {
-    const nm = $('save-name')?.value.trim();
-    if (!nm) return alert('Vul een profielnaam in');
+  $('detectbtn')?.addEventListener('click',detectHierarchies);
+  $('exportbtn')?.addEventListener('click',exportGS1);
+  $('saveprofbtn')?.addEventListener('click',()=>{collectSettings();S.modal='saveprof';R()});
+  $('closemodal')?.addEventListener('click',()=>{S.modal=null;R()});
+  $('modal-overlay')?.addEventListener('click',e=>{if(e.target.id==='modal-overlay'){S.modal=null;R();}});
+  $('confirmsave')?.addEventListener('click',()=>{
+    const nm=$('save-name')?.value.trim();
+    if(!nm) return alert('Vul een profielnaam in');
     saveProfile(nm); S.modal=null; R();
   });
-
-  $('newprofbtn')?.addEventListener('click', () => { S.editMode='new'; S.editIdx=null; R(); });
-  document.querySelectorAll('[data-edit]').forEach(b => b.addEventListener('click', e => { S.editMode='edit'; S.editIdx=parseInt(e.target.dataset.edit); R(); }));
-  document.querySelectorAll('[data-del]').forEach(b => b.addEventListener('click', e => {
-    if (confirm('Profiel verwijderen?')) { S.profiles.splice(parseInt(e.target.dataset.del),1); saveP(); R(); }
+  $('newprofbtn')?.addEventListener('click',()=>{S.editMode='new';S.editIdx=null;R()});
+  document.querySelectorAll('[data-edit]').forEach(b=>b.addEventListener('click',e=>{S.editMode='edit';S.editIdx=parseInt(e.target.dataset.edit);R()}));
+  document.querySelectorAll('[data-del]').forEach(b=>b.addEventListener('click',e=>{
+    if(confirm('Profiel verwijderen?')){S.profiles.splice(parseInt(e.target.dataset.del),1);saveP();R();}
   }));
-  $('ep-save')?.addEventListener('click', () => {
-    const nm = $('ep-name')?.value.trim(); if(!nm) return alert('Naam verplicht');
-    const nvm={}, mp={};
-    GS1_LEVELS.forEach(lvl => { const v=$('envm-'+lvl)?.value.trim(); if(v) nvm[v]=lvl; });
-    GS1F.forEach(f => { const v=$('em-'+f.k)?.value.trim(); if(v) mp[f.k]=v; });
-    const prof={name:nm, structuur:$('ep-struct').value, groeperingskolom:$('ep-groep').value.trim(), niveaukolom:$('ep-niv').value.trim(), niveauMapping:nvm, mapping:mp};
+  $('ep-save')?.addEventListener('click',()=>{
+    const nm=$('ep-name')?.value.trim(); if(!nm) return alert('Naam verplicht');
+    const nvm={},mp={};
+    GS1_LEVELS.forEach(lvl=>{const v=$('envm-'+lvl)?.value.trim();if(v)nvm[v]=lvl;});
+    GS1F.forEach(f=>{const v=$('em-'+f.k)?.value.trim();if(v)mp[f.k]=v;});
+    const prof={name:nm,structuur:$('ep-struct').value,groeperingskolom:$('ep-groep').value.trim(),niveaukolom:$('ep-niv').value.trim(),niveauMapping:nvm,mapping:mp};
     if(S.editMode==='edit'&&S.editIdx!==null) S.profiles[S.editIdx]=prof; else S.profiles.push(prof);
     saveP(); S.editMode=false; S.editIdx=null; R();
   });
-  $('ep-cancel')?.addEventListener('click', () => { S.editMode=false; S.editIdx=null; R(); });
-
-  $('s-save')?.addEventListener('click', () => {
-    S.settings={gln:$('s-gln').value.trim(), doelmarkt:$('s-dm').value.trim(), btw:$('s-btw').value, startdatum:$('s-dat').value};
+  $('ep-cancel')?.addEventListener('click',()=>{S.editMode=false;S.editIdx=null;R()});
+  $('s-save')?.addEventListener('click',()=>{
+    S.settings={gln:$('s-gln').value.trim(),doelmarkt:$('s-dm').value.trim(),btw:$('s-btw').value,startdatum:$('s-dat').value};
     saveSet(); const el=$('s-ok'); if(el){el.style.display='block';setTimeout(()=>el.style.display='none',2000);}
   });
 }
